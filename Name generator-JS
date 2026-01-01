@@ -1,0 +1,36 @@
+let a1="crazy";
+let a2="amazing";
+let a3="Fire";
+
+let b1="Garage";
+let b2="Waffles";
+let b3="Garments";
+
+let c1="Bros";
+let c2="limited";
+let c3="hub";
+
+let n=Math.floor(Math.random() * 10);
+let m=Math.floor(Math.random() * 10);
+let o=Math.floor(Math.random() * 10);
+
+let name1 = "";
+let name2 = "";
+let name3 = "";
+
+if(n%3==0){ name1 = a1 }
+else if(n%3==1){ name1 = a2 }
+else { name1 = a3 }
+
+if(m%3==0){ name2 = name1 + " " + b1 }
+else if(m%3==1){ name2 = name1 + " " + b2 }
+else { name2 = name1 + " " + b3 }
+
+if(o%3==0){ name3 = name2 + " " + c1 }
+else if(o%3==1){ name3 = name2 + " " + c2 }
+else { name3 = name2 + " " + c3 }
+
+console.log(name3);
+
+
+//bussiness name genrator using predefined words
