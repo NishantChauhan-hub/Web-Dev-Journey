@@ -1,0 +1,88 @@
+// HTML -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .card {
+            display: flex;
+            /* justify-content: center; */
+            /* align-items: center; */
+            border: 2px ;
+            border-radius: 10px;
+            margin: 7px;
+            width: 40vw;
+            padding: 5px;
+            background-color: rgb(173, 171, 171);
+        }
+
+        .image {
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .info1{
+            margin-top: 7px;
+            font-weight: bold;
+        }
+        .info2{
+            margin-left: 0px;
+            margin-top: 0px;
+            font-size: smaller;
+        }
+        .capsule{
+            margin: 0px;
+            padding: 1px;
+            position: relative;
+            left: -44px;
+            top: 75px;
+            font-size: small;
+            background-color: rgb(250, 249, 249);
+            opacity:90%;
+            height: 16px;
+            border-radius: 7px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img class="image"
+                src="https://i.ytimg.com/vi/mCx5aSEK8YE/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLB4h3uLYCuzx1GRi4VEg_QRgdPr0w"
+                alt="">
+                <span class="capsule">31:40</span>
+            <div class="text">
+                <p class="info1">Sigma video for Container | Tutorial #4</p>
+                <div class="info2">Codewithme . 756000 views . 2 months ago</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+// JS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function createcard(title, cname, views, monthsold, duration, thumbnail){
+    let html=`<div class="card">
+            <img class="image"
+                src="${thumbnail}">
+                <span class="capsule">${duration}</span>
+            <div class="text">
+                <p class="info1">${title}</p>
+                <div class="info2">${cname} . ${views} views . ${monthsold} months ago</div>
+            </div>
+        </div>`
+    document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html
+}
+    
+createcard("sigma video", "codewithme", 756000, 7, "31:20", "https://i.ytimg.com/vi/mCx5aSEK8YE/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLB4h3uLYCuzx1GRi4VEg_QRgdPr0w")
+
