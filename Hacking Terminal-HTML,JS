@@ -1,0 +1,85 @@
+// HTML -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            background-image:url(https://imgs.search.brave.com/BLNABhQqWOP_8Y54JxuS7ADEI7Z6I2h7m7Mk45hpRpg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQ2MTU1/MDkuanBn);
+        }
+        .container{
+            margin-top: 10%;
+            padding-left: 4%;
+        }
+        .text{
+            color: rgb(0, 255, 42);
+            
+            background: transparent;
+            
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="text">Initialising Hacking</div>
+        <div class="text">Reading your files</div>
+        <div class="text">Files  password detected</div>
+        <div class="text">Sending all passwords and personal files to  server</div>
+        <div class="text">Clearing up</div> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+// JS ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+let html1=`1. Initialising Hacking`;
+let html2=`2. Reading your files`;
+let html3=`3. Files  password detected`;
+let html4=`4. Sending all passwords and personal files to  server`;
+let html5=`5. Clearing up`;
+async function first() {
+    await Dots(html1);
+}
+async function second() {
+    await Dots(html2);
+}
+async function third() {
+    await Dots(html3);
+}
+async function fourth() {
+    await Dots(html4);
+}
+async function fifth() {
+    await Dots(html5);
+}
+
+async function Dots(text) {
+    const count=Math.floor(Math.random()*6)+2;
+    const container=document.querySelector(".container");
+    for (let i = 0; i<count ; i++) {
+        container.innerHTML=`<div class="text">${text + ".".repeat( (i%3) +1 )}</div>`;
+        await new Promise(resolve => setTimeout(resolve, 500));
+    }
+    await new Promise(resolve => setTimeout(resolve, 200));
+}
+
+async function main() {
+    await first();
+    await second();
+    await third();
+    await fourth();
+    await fifth();
+    console.log("Hacking Complete.");
+}
+
+main(); 
+
